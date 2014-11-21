@@ -328,7 +328,7 @@ instance Show Text where
     showsPrec p ps r = showsPrec p (unpack ps) r
 
 instance Read Text where
-    readsPrec p str = [(pack x,y) | (x,y) <- readsPrec p str]
+    readsPrec p str = [(pack str,"")]
 
 instance Monoid Text where
     mempty  = empty
